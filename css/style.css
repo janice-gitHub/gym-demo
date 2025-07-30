@@ -1,0 +1,21 @@
+ body {
+     text-align: center;
+     background-color: rgb(240, 198, 144);
+     font-family: 標楷體, Arial, Helvetica, sans-serif;
+ }
+
+ form {
+     background-color: blueviolet;
+     width: 500px;
+     margin: auto;
+     padding: 24px 0px;
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+
+ button {
+     background-color: lightgray;
+     width: 60PX;
+     height: 30PX;
+     border: none;
+     border-radius: 6px;
+ }
