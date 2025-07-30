@@ -51,6 +51,47 @@
             color: blue;
             text-align: center;
         }
+
+        #bmiTable td:first-child {
+            background-color: rgb(255, 0, 149);
+        }
+
+        h2 {
+            display: inline-block;
+            width: 400px;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1PX solid darkblue;
+        }
+
+        #Inputcontent {
+            border: 2px black solid;
+            width: 60%;
+            text-align: center;
+            background-color: rgb(65, 235, 135);
+            margin: auto;
+        }
+
+        form {
+            background-color: blueviolet;
+            width: 500px;
+            margin: auto;
+            padding: 24px 0px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        input {
+            text-align: center;
+
+        }
+
+        button {
+            background-color: lightgray;
+            width: 60PX;
+            height: 30PX;
+            border: none;
+            border-radius: 6px;
+        }
     </style>
 
 
@@ -110,7 +151,6 @@
                 <th>每天活動量ﾠ</th>
                 <th>體重過輕者所需熱量</th>
                 <th>體重正常者所需熱量</th>
-                <th>體重過重</th>
                 <th>肥胖者所需熱量</th>
             </tr>
 
@@ -157,49 +197,54 @@
         <hr>
     </div>
     </p>
+    <h2 class="sub-title">健身照片</h2>
     <div id="image">
-        <h2 class="sub-title">健身照片</h2>
+
         <img src="img/pic-1.jpg" alt="圖片消失">
         <img src="img/pic-2.jpg" alt="">
         <img src="img/pic-3.jpg" alt="">
     </div>
 
-
-    <hr>
     <h2 class="sub-title">健身影片</h2>
-    <iframe width="45%" height="360" src="https://www.youtube.com/embed/TtbrOIUYtGw"
-        title="30分鐘 超慢跑｜初學節拍超慢跑｜180BPM｜暖身+伸展｜有音樂♫" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div>
+        <hr>
 
-    <iframe width="45%" height="360" src="https://www.youtube.com/embed/LmrKejHOaG4"
-        title="男女適用!! 20分鐘 站立式全身燃脂運動、不跳躍、不傷膝、簡單有效" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="45%" height="360" src="https://www.youtube.com/embed/TtbrOIUYtGw"
+            title="30分鐘 超慢跑｜初學節拍超慢跑｜180BPM｜暖身+伸展｜有音樂♫" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-    <video width="100%" controls src="video/file_example_MP4_640_3MG.mp4"></video>
+        <iframe width="45%" height="360" src="https://www.youtube.com/embed/LmrKejHOaG4"
+            title="男女適用!! 20分鐘 站立式全身燃脂運動、不跳躍、不傷膝、簡單有效" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <video width="100%" controls src="video/file_example_MP4_640_3MG.mp4"></video>
+    </div>
 
     <hr>
+
     <h2 class="sub-title">表單</h2>
-    <h3>需要更多資訊?免費索取健身資訊</h3>
-    <p>前100名還贈送［我愛健身］書籍一本!</p>
+    <div id="Inputcontent">
+        <h3>需要更多資訊?免費索取健身資訊</h3>
+        <p>前100名還贈送［我愛健身］書籍一本!</p>
 
-
-    <form action="">
-        <input type="checkbox" name="age">18歲
-        <select name="" id="">
-            <option value="台北市">台北市</option>
-            <option value="新北市">新北市</option>
-            <option value="台中市">台中市</option>
-            <option value="台南市">台北市</option>
-        </select>
-        <label for="email"> Email:</label>
-        <input type="text" name="email" id="email" placeholder="test@gmail.com">
-        <p>您的寶貴意見</p>
-        <textarea name="comment" id="comment" cols="30" rows="30"></textarea>
-        <br>
-        <button type="submit">送出</button>
-    </form>
+        <form action="">
+            <input type="checkbox" name="age">18歲
+            <select name="" id="">
+                <option value="台北市">台北市</option>
+                <option value="新北市">新北市</option>
+                <option value="台中市">台中市</option>
+                <option value="台南市">台北市</option>
+            </select>
+            <label for="email"> Email:</label>
+            <input type="text" name="email" id="email" placeholder="test@gmail.com">
+            <p>您的寶貴意見</p>
+            <textarea name="comment" id="comment" cols="30" rows="30"></textarea>
+            <br>
+            <button type="submit">送出</button>
+        </form>
+    </div>
 </body>
 
 </html>
