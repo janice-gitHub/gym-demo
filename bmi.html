@@ -39,13 +39,13 @@
         <input type="text" name="name" id="name" placeholder="姓名">
         <br>
         <label for="heigh"> 身高:</label>
-        <input type="number" name="heigh" id="heigh" step="0.1" placeholder="身高" required>
+        <input type="number" name="height" id="height" step="0.1" placeholder="身高" required>
         <!-- required 必需輸入 -->
         <br>
         <label for="weight"> 體重:</label>
         <input type="number" name="weight" id="weight" step="0.1" placeholder="體重" required>
         <p>
-            <button type="submit">計算</button>
+            <button type="button" onclick="calc()">計算</button>
         <p>
 
     </form>
@@ -54,14 +54,31 @@
 
     <script>
 
-        let height = Number(prompt("請輸入身高"));
-        let weight = Number(prompt("請輸入體重"));
+        function calc() {
+            //取得元件
+            const heightEl = document.querySelector("#height");
+            const weightEl = document.querySelector("#weight");
+            console.log(heightEl, weightEl);
 
-        let bmi = getBMI(height, weight);
-        let comment = getComment(bmi);
+            let height = heightEl.value;
+            let weight = weightEl.value;
 
-        document.write(`<h1>身高:${height} <br> 體重:${weight} <br> BMI:${bmi.toFixed(2)}`);
-        document.write(`<h1 style="color:blue">${comment}</h1>`)
+            console.log(height, weight);
+
+            /* let height = Number(prompt("請輸入身高"));
+            let weight = Number(prompt("請輸入體重")); */
+
+            let bmi = getBMI(height, weight);
+            let comment = getComment(bmi);
+
+            document.write(`<h1>身高:${height} <br> 體重:${weight} <br> BMI:${bmi.toFixed(2)}`);
+            document.write(`<h1 style="color:blue">${comment}</h1>`)
+
+        }
+
+
+
+
 
         for (let i = 0; i < 0; i++) {
 
