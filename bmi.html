@@ -28,6 +28,8 @@
                 /* margin: 0px; */
             }
     </style>
+
+    <script src="js/tool.js"></script>
 </head>
 
 <body>
@@ -48,6 +50,51 @@
 
     </form>
     <a href="index.html">回首頁</a>
+
+
+    <script>
+
+        let height = Number(prompt("請輸入身高"));
+        let weight = Number(prompt("請輸入體重"));
+
+        let bmi = getBMI(height, weight);
+        let comment = getComment(bmi);
+
+        document.write(`<h1>身高:${height} <br> 體重:${weight} <br> BMI:${bmi.toFixed(2)}`);
+        document.write(`<h1 style="color:blue">${comment}</h1>`)
+
+        for (let i = 0; i < 0; i++) {
+
+            // 提示第幾次輸入
+
+            alert(`目前第${i + 1}幾次輸入`)
+
+            let x = Number(prompt("請輸入第一數字"));
+            let y = Number(prompt("請輸入第二數字"));
+            let op = prompt("請輸入(+-*/)=>(q: exit)");
+            if (op == "q") break;
+
+            let z;
+
+            if (op == "+") { z = x + y }
+            else if (op == "-") { z = x - y }
+            else if (op == "*") { z = x * y }
+            else if (op == "/") { z = x / y }
+            else {
+                alert("輸入錯誤!");
+            }
+
+            console.log(x, y, z);
+
+            //Math.round 四捨五入 toFixed 約束小數點
+
+            document.write(`<br><b>x=${x} y=${y} x${op}+y=${z.toFixed(2)}</b>`)
+
+            alert(`x=${x} y=${y} x+y=${z}`);
+
+        }
+
+    </script>
 </body>
 
 </html>
